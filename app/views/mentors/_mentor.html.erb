@@ -1,0 +1,12 @@
+<div class="mentor_row">
+  <div class="show_mentor">
+    <%= mentor %>
+    <%= link_to 'Edit', '#', class: "edit_mentor" %>
+    <%= link_to 'Delete', mentor_path(1), class:'bstn', method: :delete, remote: true, data: {confirm: 'want to delete?', disable_with: 'deleting.....'} %>
+  </div>
+  <div class="show_edit_mentor">
+    <input value="<%= mentor %>">
+    <%= link_to 'Cancel', '#', class: "edit_mentor" %>
+    <%= link_to 'Update', mentor_path(1), class:'btn', method: :patch, remote: true, data: {disable_with: 'Updating.....'} %>
+  </div>
+</div>

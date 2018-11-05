@@ -1,0 +1,14 @@
+<h1>Mentors</h1>
+
+<div class="mentors--list">
+  <% @mentors.each do |mentor| %>
+    <%= render partial: 'mentor', object: mentor %>
+  <% end %>
+</div>
+<br>
+<div class="new-mentor--form">
+  <input name='mentor[name]' id='mentor_name' />
+  <%= link_to 'Create Mentor', mentors_path, method: :post, remote: true  %>
+</div>
+
+<button id="new_mentor">New Mentor</button>
