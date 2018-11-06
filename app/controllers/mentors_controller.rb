@@ -1,14 +1,9 @@
 class MentorsController < ApplicationController
-  # before_action :set_mentor, only: [:show, :edit, :update, :destroy]
 
   # GET /mentors
   # GET /mentors.json
   def index
     @mentors = ['Dave', 'Ben', 'Sarah']
-  end
-
-  def admins
-    @admins = ['Jack', 'Donald', 'Andrew']
   end
 
   # GET /mentors/1

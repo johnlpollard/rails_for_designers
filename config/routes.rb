@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :mentors do
+  resources :mentors, only: [:show, :create, :update, :index, :destroy] do
     collection do
       get :admins
     end
   end
-  # put '/mentors' to: 'mentors#update'
+
+  get 'terms', to: 'welcome#terms'
 
   root 'mentors#index'
 end
