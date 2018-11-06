@@ -1,8 +1,8 @@
-<%= link_to 'Admin Mentors', admins_mentors_path %>
-<h1>Mentors</h1>
+<%= link_to 'Back', :back %>
+<h1>Admin Mentors</h1>
 
 <div class="mentors--list">
-  <% @mentors.each do |mentor| %>
+  <% @admins.each do |mentor| %>
     <%= render partial: 'mentor', object: mentor %>
   <% end %>
 </div>

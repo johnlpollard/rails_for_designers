@@ -7,6 +7,10 @@ class MentorsController < ApplicationController
     @mentors = ['Dave', 'Ben', 'Sarah']
   end
 
+  def admins
+    @admins = ['Jack', 'Donald', 'Andrew']
+  end
+
   # GET /mentors/1
   # GET /mentors/1.json
   def show
@@ -24,8 +28,7 @@ class MentorsController < ApplicationController
   # POST /mentors
   # POST /mentors.json
   def create
-    # @mentor = Mentor.new(mentor_params)
-    @mentor = params[:mentor][:name]
+    @mentor = mentor_params[:name]
     render "show.js.coffee"
   end
 
@@ -50,6 +53,6 @@ class MentorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mentor_params
-      params.fetch(:mentor, {})
+      params.fetch(:mentor)
     end
 end
