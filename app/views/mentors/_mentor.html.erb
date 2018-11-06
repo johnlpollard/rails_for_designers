@@ -1,12 +1,17 @@
 <div class="mentor_row">
   <div class="show_mentor">
-    <%= mentor %>
+    <span class="mentor_name"><%= mentor %></span>
     <%= link_to 'Edit', '#', class: "edit_mentor" %>
     <%= link_to 'Delete', mentor_path(1), class:'bstn', method: :delete, remote: true, data: {confirm: 'want to delete?', disable_with: 'deleting.....'} %>
   </div>
   <div class="show_edit_mentor">
-    <input value="<%= mentor %>">
-    <%= link_to 'Cancel', '#', class: "edit_mentor" %>
-    <%= link_to 'Update', mentor_path(1), class:'btn', method: :patch, remote: true, data: {disable_with: 'Updating.....'} %>
+    <form action="<%= mentor_path(1) %>" data-remote="true" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <input value="<%= mentor %>" type="text" name="mentor[name]" id="mentor_name">
+      <%= link_to 'Cancel', '#', class: "edit_mentor" %>
+      <input type="submit" value="Update" data-disable-with="Updating...">
+    </form>
+    <%# <input value=""> %>
+    <%# link_to 'Update', mentor_path(1), class:'btn', method: :patch, remote: true, data: {disable_with: 'Updating.....'} %>
   </div>
 </div>

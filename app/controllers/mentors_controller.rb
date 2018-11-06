@@ -25,7 +25,7 @@ class MentorsController < ApplicationController
   # POST /mentors.json
   def create
     # @mentor = Mentor.new(mentor_params)
-    @mentor = ["Carol", "Zach", "Tom", "Alban", "Kevin"].sample
+    @mentor = params[:mentor][:name]
     render "show.js.coffee"
   end
 

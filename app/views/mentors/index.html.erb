@@ -6,9 +6,12 @@
   <% end %>
 </div>
 <br>
+
 <div class="new-mentor--form">
-  <input name='mentor[name]' id='mentor_name' />
-  <%= link_to 'Create Mentor', mentors_path, method: :post, remote: true  %>
+  <form action="<%= mentors_path %>" data-remote="true" method="post">
+    <input value="" type="text" name="mentor[name]" id="mentor_name">
+    <input type="submit">
+  </form>
 </div>
 
 <button id="new_mentor">New Mentor</button>
