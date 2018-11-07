@@ -1,5 +1,5 @@
-<div class="card-row">
-  
+<div class="card-row <%= 'special' if mentor.starts_with?('Z') %>">
+
   <div class="js--mentor_details  card-row__details flex">
     <span class="card-row__name js--mentor_name flex-align-left"><%= mentor %></span>
     <div class="card-row__options flex-align-right">
@@ -7,16 +7,16 @@
       <%= link_to 'Delete', mentor_path(1), class:'text-link', method: :delete, remote: true, data: {confirm: 'want to delete?', disable_with: 'deleting.....'} %>
     </div>
   </div>
-  
+
   <div class="js--edit_mentor_form card-row__edit">
     <form action="<%= mentor_path(1) %>" data-remote="true" method="post" class="flex">
       <input type="hidden" name="_method" value="patch">
       <input value="<%= mentor %>" type="text" name="mentor[name]" id="mentor_name" class="text-input flex-align-left">
       <div class="flex-align-right">
         <input type="submit" value="Update" data-disable-with="Updating..." class="btn">
-        <%= link_to 'Cancel', '#', class: "text-link" %>
+        <%= link_to 'Cancel', '#', class: "text-link js--edit_mentor" %>
       </div>
     </form>
   </div>
-  
+
 </div>
