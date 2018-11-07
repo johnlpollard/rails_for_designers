@@ -19,5 +19,28 @@
  @import './components';
  
  /* global */
+ :focus {
+   outline: 1px dashed $gray--light;
+ }
  
  /* utilities */
+ // utilities
+ // type
+ .right { text-align: right; }
+ .left { text-align: left; }
+ .center { text-align: center; }
+ .bold { font-weight: 700; }
+ .light { font-weight: 300; }
+ .caps { text-transform: capitalize; }
+
+
+ // padding
+ .pad { padding: 30px; }
+ .pad-left { padding: 30px; }
+ .pad-right { padding: 30px; }
+ .pad-top { padding: 30px; }
+ .pad-bottom { padding: 30px; }
+
+ .gray {
+  color: $gray;
+ }
