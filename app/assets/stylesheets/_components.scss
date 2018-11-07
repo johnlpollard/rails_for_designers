@@ -1,12 +1,39 @@
 @import './variables';
 
 // card
+.nav,
 .card {
   background: linear-gradient(135deg, rgba(253,238,233,1) 0%,rgba(255,255,255,1) 41%);
   box-shadow: 0px 26px 44px -12px rgba(35,58,88,0.54);
   border-radius: 10px;
   max-width: 515px;
   margin: 0 auto;
+}
+
+.nav {
+  background: transparent;
+  box-shadow: none;
+  margin-bottom: 30px;
+  
+  a.text-link {
+    background:
+     linear-gradient(
+       to bottom, $blue--dark 0%,
+       $blue--dark 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 50px 0;
+    border-radius: 50px;
+    color: $white;
+    text-decoration: none;
+    transition: background-size .2s;
+    padding: 3px 15px;
+    
+    &:hover { 
+      background-size: 50px 50px;
+    }
+  }
 }
 
 .card__title {
