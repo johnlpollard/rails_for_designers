@@ -1,2 +1,2 @@
-$("input[value='Updating...']").parents('.mentor_row').find('.mentor_name').text("<%= params[:mentor][:name] %>")
-$("input[value='Updating...']").parents('.mentor_row').children('.show_mentor,.show_edit_mentor').toggle()
+$("input[value='Updating...']").parents('.card-row').find('.js--mentor_name').text("<%= params[:mentor][:name] %>")
+$("input[value='Updating...']").parents('.card-row').children('.js--mentor_details, .js--edit_mentor_form').toggle()

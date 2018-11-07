@@ -6,6 +6,10 @@ class MentorsController < ApplicationController
     @mentors = ['Dave', 'Ben', 'Sarah']
   end
 
+  def admins
+    @admins = ['Jamie', 'Bill']
+  end
+
   # GET /mentors/1
   # GET /mentors/1.json
   def show
