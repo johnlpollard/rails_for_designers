@@ -10,6 +10,7 @@ require "action_view/railtie"
 require "active_job/railtie" # Only for Rails >= 4.2
 require "action_cable/engine" # Only for Rails >= 5.0
 require "active_storage/engine" # Only for Rails >= 5.2
+require "active_record/railtie"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
 

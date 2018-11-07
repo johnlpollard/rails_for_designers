@@ -33,6 +33,11 @@
   flex-grow: 2;
 }
 
+.card-row__add,
+.card-row__edit {
+  display: none;
+}
+.card-row__add form,
 .card-row__edit form {
   display: flex;
 }
@@ -51,11 +56,10 @@
   margin: 0 auto;
 }
 
-
 // link
 .text-link {
   color: $gray;
-  transition: all .3s;
+  transition: color .3s;
   font-weight: $light;
   letter-spacing: .03rem;
   
@@ -98,10 +102,22 @@
   }
 }
 
+.card__button--primary.text-link {
+  font-size: 1rem;
+  padding: 10px;
+  background: transparent;
+  border:none;
+  cursor: pointer;
+}
+
 .text-input {
   border-radius: 50px;
   border: 1px solid $gray--light;
   color: $black;
   padding: 10px 20px;
   font-size: 1rem;
+  
+  &.flex-align-left {
+    margin-right: 20px;
+  }
 }

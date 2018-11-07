@@ -14,33 +14,40 @@
  *= require_self
  */
  
- @import './variables';
- @import './layout';
- @import './components';
+  @import './variables';
+  @import './layout';
+  @import './components';
+
+  /* global */
+  :focus {
+   outline: 1px dotted $gray--light;
+  }
  
- /* global */
- :focus {
-   outline: 1px dashed $gray--light;
- }
- 
- /* utilities */
- // utilities
- // type
- .right { text-align: right; }
- .left { text-align: left; }
- .center { text-align: center; }
- .bold { font-weight: 700; }
- .light { font-weight: 300; }
- .caps { text-transform: capitalize; }
+  /* utilities */
+  // type
+  .right { text-align: right; }
+  .left { text-align: left; }
+  .center { text-align: center; }
+  .bold { font-weight: 700; }
+  .light { font-weight: 300; }
+  .caps { text-transform: capitalize; }
+  
+  // type color
+  .gray { color: $gray; }
+  .white { color: $white; } 
 
-
- // padding
- .pad { padding: 30px; }
- .pad-left { padding: 30px; }
- .pad-right { padding: 30px; }
- .pad-top { padding: 30px; }
- .pad-bottom { padding: 30px; }
-
- .gray {
-  color: $gray;
- }
+  // padding
+  .pad { padding: 30px; }
+  .pad-left { padding: 30px; }
+  .pad-right { padding: 30px; }
+  .pad-top { padding: 30px; }
+  .pad-bottom { padding: 30px; }
+  
+  // alignment (parent needs flex)
+  .flex { display: flex; }
+  .flex-align-left { flex-grow: 2; }
+  .flex-align-right {
+    align-self: center;
+    justify-content: flex-end;
+  }
+  
