@@ -1,0 +1,53 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+  @import './variables';
+  @import './layout';
+  @import './components';
+
+  /* global */
+  :focus {
+   outline: 1px dotted $gray--light;
+  }
+ 
+  /* utilities */
+  // type
+  .right { text-align: right; }
+  .left { text-align: left; }
+  .center { text-align: center; }
+  .bold { font-weight: 700; }
+  .light { font-weight: 300; }
+  .caps { text-transform: uppercase; }
+  
+  // type color
+  .gray { color: $gray; }
+  .white { color: $white; } 
+
+  // padding
+  .pad { padding: 30px; }
+  .pad-left { padding: 30px; }
+  .pad-right { padding: 30px; }
+  .pad-top { padding: 30px; }
+  .pad-bottom { padding: 30px; }
+  
+  // alignment (parent needs flex)
+  .flex { display: flex; }
+  .flex-align-left { flex-grow: 2; }
+  .flex-align-right {
+    align-self: center;
+    justify-content: flex-end;
+  }
+  

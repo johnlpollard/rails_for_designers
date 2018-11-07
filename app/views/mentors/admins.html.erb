@@ -1,18 +1,24 @@
-<%= link_to 'Back', :back %>
-<h1>Admin Mentors</h1>
-
-<div class="mentors--list">
-  <% @admins.each do |mentor| %>
-    <%= render partial: 'mentor', object: mentor %>
-  <% end %>
-</div>
-<br>
-
-<div class="new-mentor--form">
-  <form action="<%= mentors_path %>" data-remote="true" method="post">
-    <input value="" type="text" name="mentor[name]" id="mentor_name">
-    <input type="submit">
-  </form>
+<div class="nav">
+  <%= link_to 'Back', :back, class: 'text-link white caps' %>
 </div>
 
-<button id="new_mentor">New Mentor</button>
+<div class="card">
+  <h1 class="card__title">Admin Mentors</h1>
+
+  <div class="card-list" id="mentors-list">
+    <% @admins.each do |mentor| %>
+      <%= render partial: 'mentor', object: mentor %>
+    <% end %>
+  </div>
+  
+  <div class="card-row">
+    <div id="new-mentor-form" class="card-row__add">
+      <form action="<%= mentors_path %>" data-remote="true" method="post" class="flex">
+        <input value="" type="text" name="mentor[name]" id="mentor_name" class="text-input flex-align-left" placeholder="Add an admin mentor">
+        <input type="submit" class="btn flex-align-right">
+      </form>
+    </div>
+
+    <button id="new_mentor" class="btn--large card__button--primary">New Mentor</button>
+  </div>
+</div>

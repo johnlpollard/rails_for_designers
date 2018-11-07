@@ -1,1 +1,1 @@
-$("a:contains('deleting.....')").parents('.mentor_row').remove()
+$("a:contains('deleting.....')").parents('.card-row').remove()
