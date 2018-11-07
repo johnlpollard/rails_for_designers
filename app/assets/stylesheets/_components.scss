@@ -1,0 +1,107 @@
+@import './variables';
+
+// card
+.card {
+  background: linear-gradient(135deg, rgba(253,238,233,1) 0%,rgba(255,255,255,1) 41%);
+  box-shadow: 0px 26px 44px -12px rgba(35,58,88,0.54);
+  border-radius: 10px;
+  max-width: 515px;
+  margin: 0 auto;
+}
+
+.card__title {
+  border-bottom: 1px solid $gray--light;
+  text-align: center;
+  font-weight: $light;
+  padding: 30px 10px 20px 10px;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+.card-row {
+  border-bottom: 1px solid $gray--light;
+  padding: 30px 40px;
+}
+
+.card-row__details {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card-row__name {
+  font-size: 1.6rem;
+  flex-grow: 2;
+}
+
+.card-row__edit form {
+  display: flex;
+}
+
+.card-row__options {
+  align-self: center;
+  justify-content: flex-end;
+}
+
+.card-row__input {
+  flex-grow: 2;
+}
+
+.card__button--primary {
+  display: block;
+  margin: 0 auto;
+}
+
+
+// link
+.text-link {
+  color: $gray;
+  transition: all .3s;
+  font-weight: $light;
+  letter-spacing: .03rem;
+  
+  &:hover {
+    color: $red;
+  }
+}
+
+.btn,
+.btn--large {
+  border: none;
+  border-radius: 50px;
+  color: $white;
+  cursor: pointer;
+  font-weight: $bold;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  transition: background .3s;
+}
+
+.btn {
+  background: $blue;
+  box-shadow: 0px 10px 30px -12px rgba(187,232,247,1);
+  
+  &:hover {
+    background: $blue--dark;
+  }
+}
+
+.btn--large {
+  background: $red;
+  padding: 17px 80px;
+  box-shadow: 0px 15px 20px -12px rgba(234,145,120,0.6);
+  
+  &:hover {
+    background: $red--dark;
+    color: $white;
+  }
+}
+
+.text-input {
+  border-radius: 50px;
+  border: 1px solid $gray--light;
+  color: $black;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
