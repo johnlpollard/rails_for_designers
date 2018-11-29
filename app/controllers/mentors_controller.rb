@@ -1,9 +1,17 @@
 class MentorsController < ApplicationController
 
+  def girls
+    @mentors = ['sally', 'susan']
+    @my_title = 'Girls'
+    render 'index'
+  end
+
   # GET /mentors
   # GET /mentors.json
   def index
+    @my_title = 'index'
     @mentors = ['Dave', 'Ben', 'Sarah']
+    @mentees = ['Bill', 'Sam']
   end
 
   def admins
@@ -13,6 +21,7 @@ class MentorsController < ApplicationController
   # GET /mentors/1
   # GET /mentors/1.json
   def show
+    @mentor_name = "Steve Jobs"
   end
 
   # GET /mentors/new

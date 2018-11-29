@@ -3,7 +3,7 @@
 </div>
 
 <div class="card">
-  <h1 class="card__title"><%= image_tag "mentor_icon.png", class: "title__icon" %>Mentors</h1>
+  <h1 class="card__title"><%= image_tag "mentor_icon.png", class: "title__icon" %><%= @my_title %></h1>
 
   <div class="card-list" id="mentors-list">
     <% @mentors.each do |mentor| %>

@@ -1,0 +1,15 @@
+<% country_name = mentee_info['country']  %>
+
+<tr>
+  <td><%= mentee_info['name'] %></td>
+  <td>
+    <% if mentee_info['country'] == 'Mexico'  %>
+      <b><%= mentee_info['country'] %></b>
+    <% elsif mentee_info['country'] == 'USA' %>
+      <i><%= mentee_info['country'] %></i>
+    <% else %>
+      <%= mentee_info['country'] %>
+    <% end %>
+  </td>
+  <td><%= @mentor_name %></td>
+</tr>

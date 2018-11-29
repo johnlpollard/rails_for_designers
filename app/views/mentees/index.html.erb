@@ -1,0 +1,21 @@
+this is my mentees index file
+
+
+
+<a href="/mentors" class="btn" id="my_mentors_link">My mentors </a>
+<a href="<%= mentors_path %>">My mentors </a>
+<a href="<%= mentors_url %>" class="btn">My mentors </a>
+<%= link_to 'My mentors again', mentors_path, class: "btn", id: 'my_mentors_link' %>
+
+<br>
+<%= link_to 'My favorite mentee', mentee_path(123) %>
+
+<table>
+  <tr>
+    <th>Mentee Name</th>
+    <th>Country</th>
+    <th>Mentor Name</th>
+  </tr>
+
+  <%= render partial: 'mentee_info', collection: @mentees %>
+</table>

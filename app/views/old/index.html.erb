@@ -1,0 +1,33 @@
+This is my mentees page
+
+<br><a href="/mentors">Go to mentors page</a>
+<br><a href="<%= mentors_path %>">Go to mentors page</a>
+<br><a href="<%= mentors_url %>">Go to mentors page</a>
+<br><%= link_to 'Go to mentors page', mentors_path, style: "font-size:20px"  %>
+
+
+<p></p>
+
+<br><%= link_to 'Favorite Mentor', mentor_path(999), style: "color:white"  %>
+
+<br><br>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Country</th>
+    <th>Mentor Name</th>
+  </tr>
+  <br>
+
+  <% mentor_name = 'bill' %>
+  <% @mentor_name = 'Billy' %>
+  <br> <%= render partial: 'mentee_info' %>
+
+  <% @mentor_name = 'Jack' %>
+  <br> <%= render partial: 'mentee_info' %>
+</table>
+
+<%= mentor_name  %>
+<%= @mentor_name %>
